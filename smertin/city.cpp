@@ -9,7 +9,7 @@ void City::AddPath(City* destination, int cost) {
 
 std::string City::ToString() const {
     std::ostringstream oss;
-    oss << name_ << " — ïóòè:";
+    oss << name_ << " â€” Ð¿ÑƒÑ‚Ð¸:";
     for (const auto& path : paths_) {
         oss << " " << path.first->name_ << ":" << path.second;
     }
