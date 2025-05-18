@@ -1,6 +1,7 @@
 #include <iostream>
 #include <memory>
 #include <string>
+#include <windows.h>
 #include "name.h"
 #include "person.h"
 #include "cat.h"
@@ -42,7 +43,9 @@ int InputInt(const std::string& prompt) {
 }
 
 int main() {
-    setlocale(LC_ALL, "RUSSIAN");
+    SetConsoleOutputCP(CP_UTF8);  
+    SetConsoleCP(CP_UTF8);        
+    setlocale(LC_ALL, "RUSSIAN"); 
 
     std::cout << "Задача 1 - Создание имен.\n";
     Name n1, n2, n3, n4;
