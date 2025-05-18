@@ -24,11 +24,11 @@ void Person::UpdateNameFromFather() {
             name_.SetSurname(father_->name_.GetSurname());
         }
         if (!name_.HasPatronymic() && !father_->name_.GetFirstName().empty()) {
-            name_.SetPatronymic(father_->name_.GetFirstName() + "ович");
+            name_.SetPatronymic(father_->name_.GetFirstName() + "РѕРІРёС‡");
         }
     }
 }
 
 std::string Person::ToString() const {
-    return name_.ToString() + ", рост " + std::to_string(height_);
+    return name_.ToString() + ", СЂРѕСЃС‚ " + std::to_string(height_);
 }
