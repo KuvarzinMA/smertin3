@@ -4,18 +4,18 @@
 Cat::Cat(const std::string& name) : name_(name) {}
 
 void Cat::Meow() const {
-    std::cout << name_ << ": ìÿó!" << std::endl;
+    std::cout << name_ << ": Ð¼ÑÑƒ!" << std::endl;
 }
 
 void Cat::Meow(int count) const {
     std::cout << name_ << ": ";
     for (int i = 0; i < count; ++i) {
-        std::cout << "ìÿó";
+        std::cout << "Ð¼ÑÑƒ";
         if (i < count - 1) std::cout << "-";
     }
     std::cout << "!" << std::endl;
 }
 
 std::string Cat::ToString() const {
-    return "êîò: " + name_;
+    return "ÐºÐ¾Ñ‚: " + name_;
 }
