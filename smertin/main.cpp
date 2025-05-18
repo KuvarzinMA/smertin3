@@ -9,13 +9,13 @@
 void InputName(Name& name) {
     std::string first, surname, patronymic;
 
-    std::cout << "Ââåäèòå ëè÷íîå èìÿ (îáÿçàòåëüíî): ";
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð»Ð¸Ñ‡Ð½Ð¾Ðµ Ð¸Ð¼Ñ (Ð¾Ð±ÑÐ·Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾): ";
     std::getline(std::cin, first);
 
-    std::cout << "Ââåäèòå ôàìèëèþ (ìîæíî îñòàâèòü ïóñòûì): ";
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ„Ð°Ð¼Ð¸Ð»Ð¸ÑŽ (Ð¼Ð¾Ð¶Ð½Ð¾ Ð¾ÑÑ‚Ð°Ð²Ð¸Ñ‚ÑŒ Ð¿ÑƒÑÑ‚Ñ‹Ð¼): ";
     std::getline(std::cin, surname);
 
-    std::cout << "Ââåäèòå îò÷åñòâî (ìîæíî îñòàâèòü ïóñòûì): ";
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¾Ñ‚Ñ‡ÐµÑÑ‚Ð²Ð¾ (Ð¼Ð¾Ð¶Ð½Ð¾ Ð¾ÑÑ‚Ð°Ð²Ð¸Ñ‚ÑŒ Ð¿ÑƒÑÑ‚Ñ‹Ð¼): ";
     std::getline(std::cin, patronymic);
 
     if (!first.empty() && surname.empty() && patronymic.empty()) {
@@ -33,107 +33,107 @@ int InputInt(const std::string& prompt) {
     int value;
     std::cout << prompt;
     while (!(std::cin >> value)) {
-        std::cout << "Îøèáêà ââîäà, ââåäèòå ÷èñëî: ";
+        std::cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð²Ð²Ð¾Ð´Ð°, Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾: ";
         std::cin.clear();
         std::cin.ignore(10000, '\n');
     }
-    std::cin.ignore(10000, '\n');  // î÷èñòêà îñòàòêà ñòðîêè
+    std::cin.ignore(10000, '\n');  // Ð¾Ñ‡Ð¸ÑÑ‚ÐºÐ° Ð¾ÑÑ‚Ð°Ñ‚ÐºÐ° ÑÑ‚Ñ€Ð¾ÐºÐ¸
     return value;
 }
 
 int main() {
     setlocale(LC_ALL, "RUSSIAN");
 
-    std::cout << "Çàäà÷à 1 - Ñîçäàíèå èìåí.\n";
+    std::cout << "Ð—Ð°Ð´Ð°Ñ‡Ð° 1 - Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ð¸Ð¼ÐµÐ½.\n";
     Name n1, n2, n3, n4;
-    std::cout << "Ñîçäàíèå èìåíè 1:\n";
+    std::cout << "Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ð¸Ð¼ÐµÐ½Ð¸ 1:\n";
     InputName(n1);
-    std::cout << "Ñîçäàíèå èìåíè 2:\n";
+    std::cout << "Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ð¸Ð¼ÐµÐ½Ð¸ 2:\n";
     InputName(n2);
-    std::cout << "Ñîçäàíèå èìåíè 3:\n";
+    std::cout << "Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ð¸Ð¼ÐµÐ½Ð¸ 3:\n";
     InputName(n3);
-    std::cout << "Ñîçäàíèå èìåíè 4:\n";
+    std::cout << "Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ð¸Ð¼ÐµÐ½Ð¸ 4:\n";
     InputName(n4);
 
-    std::cout << "\nÂâåä¸ííûå èìåíà:\n";
+    std::cout << "\nÐ’Ð²ÐµÐ´Ñ‘Ð½Ð½Ñ‹Ðµ Ð¸Ð¼ÐµÐ½Ð°:\n";
     n1.Print();
     n2.Print();
     n3.Print();
     n4.Print();
 
-    std::cout << "\nÇàäà÷à 2 - Ñîçäàíèå ëþäåé ñ èìåíàìè è ðîñòîì.\n";
+    std::cout << "\nÐ—Ð°Ð´Ð°Ñ‡Ð° 2 - Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ð»ÑŽÐ´ÐµÐ¹ Ñ Ð¸Ð¼ÐµÐ½Ð°Ð¼Ð¸ Ð¸ Ñ€Ð¾ÑÑ‚Ð¾Ð¼.\n";
 
-    int height1 = InputInt("Ââåäèòå ðîñò äëÿ ïåðâîãî ÷åëîâåêà: ");
-    int height2 = InputInt("Ââåäèòå ðîñò äëÿ âòîðîãî ÷åëîâåêà: ");
-    int height3 = InputInt("Ââåäèòå ðîñò äëÿ òðåòüåãî ÷åëîâåêà: ");
+    int height1 = InputInt("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð¾ÑÑ‚ Ð´Ð»Ñ Ð¿ÐµÑ€Ð²Ð¾Ð³Ð¾ Ñ‡ÐµÐ»Ð¾Ð²ÐµÐºÐ°: ");
+    int height2 = InputInt("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð¾ÑÑ‚ Ð´Ð»Ñ Ð²Ñ‚Ð¾Ñ€Ð¾Ð³Ð¾ Ñ‡ÐµÐ»Ð¾Ð²ÐµÐºÐ°: ");
+    int height3 = InputInt("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð¾ÑÑ‚ Ð´Ð»Ñ Ñ‚Ñ€ÐµÑ‚ÑŒÐµÐ³Ð¾ Ñ‡ÐµÐ»Ð¾Ð²ÐµÐºÐ°: ");
 
     auto p1 = std::make_shared<Person>(n1, height1);
     auto p2 = std::make_shared<Person>(n2, height2);
     auto p3 = std::make_shared<Person>(n3, height3);
 
-    std::cout << "\nËþäè:\n";
+    std::cout << "\nÐ›ÑŽÐ´Ð¸:\n";
     std::cout << p1->ToString() << "\n" << p2->ToString() << "\n" << p3->ToString() << std::endl;
 
-    std::cout << "\nÇàäà÷à 3 - Ñîçäàíèå ëþäåé ñ ðîäèòåëÿìè.\n";
+    std::cout << "\nÐ—Ð°Ð´Ð°Ñ‡Ð° 3 - Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ð»ÑŽÐ´ÐµÐ¹ Ñ Ñ€Ð¾Ð´Ð¸Ñ‚ÐµÐ»ÑÐ¼Ð¸.\n";
 
-    // Ââîä òð¸õ ëþäåé è ñâÿçûâàíèå îòöîâ
-    std::cout << "Ââåäèòå äàííûå äëÿ ÷åëîâåêà 1 (áóäåò îòöîì):\n";
+    // Ð’Ð²Ð¾Ð´ Ñ‚Ñ€Ñ‘Ñ… Ð»ÑŽÐ´ÐµÐ¹ Ð¸ ÑÐ²ÑÐ·Ñ‹Ð²Ð°Ð½Ð¸Ðµ Ð¾Ñ‚Ñ†Ð¾Ð²
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ Ð´Ð»Ñ Ñ‡ÐµÐ»Ð¾Ð²ÐµÐºÐ° 1 (Ð±ÑƒÐ´ÐµÑ‚ Ð¾Ñ‚Ñ†Ð¾Ð¼):\n";
     Name father1_name;
     InputName(father1_name);
-    int father1_height = InputInt("Ðîñò: ");
+    int father1_height = InputInt("Ð Ð¾ÑÑ‚: ");
     auto father1 = std::make_shared<Person>(father1_name, father1_height);
 
-    std::cout << "Ââåäèòå äàííûå äëÿ ÷åëîâåêà 2 (ñûí ÷åëîâåêà 1):\n";
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ Ð´Ð»Ñ Ñ‡ÐµÐ»Ð¾Ð²ÐµÐºÐ° 2 (ÑÑ‹Ð½ Ñ‡ÐµÐ»Ð¾Ð²ÐµÐºÐ° 1):\n";
     Name father2_name;
     InputName(father2_name);
-    int father2_height = InputInt("Ðîñò: ");
+    int father2_height = InputInt("Ð Ð¾ÑÑ‚: ");
     auto father2 = std::make_shared<Person>(father2_name, father2_height, father1);
 
-    std::cout << "Ââåäèòå äàííûå äëÿ ÷åëîâåêà 3 (ñûí ÷åëîâåêà 2):\n";
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ Ð´Ð»Ñ Ñ‡ÐµÐ»Ð¾Ð²ÐµÐºÐ° 3 (ÑÑ‹Ð½ Ñ‡ÐµÐ»Ð¾Ð²ÐµÐºÐ° 2):\n";
     Name father3_name;
     InputName(father3_name);
-    int father3_height = InputInt("Ðîñò: ");
+    int father3_height = InputInt("Ð Ð¾ÑÑ‚: ");
     auto father3 = std::make_shared<Person>(father3_name, father3_height, father2);
 
-    std::cout << "\nËþäè ñ ðîäèòåëÿìè:\n";
+    std::cout << "\nÐ›ÑŽÐ´Ð¸ Ñ Ñ€Ð¾Ð´Ð¸Ñ‚ÐµÐ»ÑÐ¼Ð¸:\n";
     std::cout << father1->ToString() << "\n" << father2->ToString() << "\n" << father3->ToString() << std::endl;
 
-    std::cout << "\nÇàäà÷à 4 - Êîò ìÿóêàåò.\n";
-    std::cout << "Ââåäèòå èìÿ êîòà: ";
+    std::cout << "\nÐ—Ð°Ð´Ð°Ñ‡Ð° 4 - ÐšÐ¾Ñ‚ Ð¼ÑÑƒÐºÐ°ÐµÑ‚.\n";
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Ñ ÐºÐ¾Ñ‚Ð°: ";
     std::string cat_name;
     std::getline(std::cin, cat_name);
     Cat cat(cat_name);
 
     cat.Meow();
-    int meow_count = InputInt("Ââåäèòå, ñêîëüêî ðàç êîò äîëæåí ìÿóêàòü: ");
+    int meow_count = InputInt("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ, ÑÐºÐ¾Ð»ÑŒÐºÐ¾ Ñ€Ð°Ð· ÐºÐ¾Ñ‚ Ð´Ð¾Ð»Ð¶ÐµÐ½ Ð¼ÑÑƒÐºÐ°Ñ‚ÑŒ: ");
     cat.Meow(meow_count);
 
-    std::cout << "\nÇàäà÷à 5 - Ãîðîäà.\n";
+    std::cout << "\nÐ—Ð°Ð´Ð°Ñ‡Ð° 5 - Ð“Ð¾Ñ€Ð¾Ð´Ð°.\n";
 
-    std::cout << "Ââåäèòå íàçâàíèå ãîðîäà 1: ";
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ðµ Ð³Ð¾Ñ€Ð¾Ð´Ð° 1: ";
     std::string city1_name;
     std::getline(std::cin, city1_name);
     City city1(city1_name);
 
-    std::cout << "Ââåäèòå íàçâàíèå ãîðîäà 2: ";
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ðµ Ð³Ð¾Ñ€Ð¾Ð´Ð° 2: ";
     std::string city2_name;
     std::getline(std::cin, city2_name);
     City city2(city2_name);
 
-    std::cout << "Ââåäèòå íàçâàíèå ãîðîäà 3: ";
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ðµ Ð³Ð¾Ñ€Ð¾Ð´Ð° 3: ";
     std::string city3_name;
     std::getline(std::cin, city3_name);
     City city3(city3_name);
 
-    int cost12 = InputInt("Ââåäèòå ñòîèìîñòü ïóòè èç ãîðîäà 1 â ãîðîä 2: ");
-    int cost13 = InputInt("Ââåäèòå ñòîèìîñòü ïóòè èç ãîðîäà 1 â ãîðîä 3: ");
+    int cost12 = InputInt("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÑ‚Ð¾Ð¸Ð¼Ð¾ÑÑ‚ÑŒ Ð¿ÑƒÑ‚Ð¸ Ð¸Ð· Ð³Ð¾Ñ€Ð¾Ð´Ð° 1 Ð² Ð³Ð¾Ñ€Ð¾Ð´ 2: ");
+    int cost13 = InputInt("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÑ‚Ð¾Ð¸Ð¼Ð¾ÑÑ‚ÑŒ Ð¿ÑƒÑ‚Ð¸ Ð¸Ð· Ð³Ð¾Ñ€Ð¾Ð´Ð° 1 Ð² Ð³Ð¾Ñ€Ð¾Ð´ 3: ");
 
     city1.AddPath(&city2, cost12);
     city1.AddPath(&city3, cost13);
 
-    std::cout << "\nÃîðîä 1: " << city1.ToString() << std::endl;
-    std::cout << "Ãîðîä 2: " << city2.ToString() << std::endl;
-    std::cout << "Ãîðîä 3: " << city3.ToString() << std::endl;
+    std::cout << "\nÐ“Ð¾Ñ€Ð¾Ð´ 1: " << city1.ToString() << std::endl;
+    std::cout << "Ð“Ð¾Ñ€Ð¾Ð´ 2: " << city2.ToString() << std::endl;
+    std::cout << "Ð“Ð¾Ñ€Ð¾Ð´ 3: " << city3.ToString() << std::endl;
 
     return 0;
 }
